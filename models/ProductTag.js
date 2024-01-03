@@ -8,7 +8,7 @@ ProductTag.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      autoIncrement: true,
       primaryKey: true,
     },
     product_id: {
@@ -21,8 +21,8 @@ ProductTag.init(
     tag_id: {
       type: DataTypes.INTEGER,
       references:{
-        model:"tag",
-        key:"id"
+        model:'tag',
+        key:'id'
       }
     }
   },     
@@ -36,4 +36,3 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
-
